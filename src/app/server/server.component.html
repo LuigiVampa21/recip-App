@@ -1,0 +1,22 @@
+<input
+  type="text"
+  [ngModel]="serverName"
+  (input)="onUpdateServerName($event)"
+/>
+<p>Server {{ serverID }} is currently: {{ serverStatus }}</p>
+<button class="btn btn-primary">Create Server</button>
+
+<button class="btn btn-primary" (click)="turnPvisible()">
+  Display Details
+</button>
+<p [ngClass]="pVisible ? 'visible' : 'hidden'">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste exercitationem
+  vero sapiente iure dicta atque odit optio ipsa et dolorem.
+</p>
+<!-- <p *ngIf="pVisible"
+[ngClass]="pVisible && i > 5 ? 'blueClass' : ''"
+>{{ i }}</p> -->
+
+<p *ngFor="let clickA of clickArray"
+  [ngClass]="clickA > 5 ? 'blueClass' : ''"
+>{{ clickA }}</p>
