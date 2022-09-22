@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+showPage: string = '';
 title:string = 'recip\'App'
 constructor(){
+}
+onEmitNavigate(to:string){
+  this.showPage = to; 
 }
 
 }
