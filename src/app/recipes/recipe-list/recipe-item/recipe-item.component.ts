@@ -8,7 +8,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 export class RecipeItemComponent implements OnInit {
   @Output() recipeSelected = new EventEmitter<void>()
   @Input() recipe: {name: string, description: string, imagePath: string};
-  // @Output() imagePath:string = '';
+
   constructor() { }
 
   ngOnInit(): void {   
@@ -16,5 +16,4 @@ export class RecipeItemComponent implements OnInit {
   onClickItem(e:any){
     this.recipeSelected.emit()
   }
-
 }
