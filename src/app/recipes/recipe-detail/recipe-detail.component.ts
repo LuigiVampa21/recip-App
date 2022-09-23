@@ -7,11 +7,11 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-detail.component.scss']
 })
 export class RecipeDetailComponent implements OnInit {
+  btnOpen = false;
 @Input() recipe: Recipe;
   constructor() { }
 
   ngOnInit(): void {
   }
-  
 
 }
