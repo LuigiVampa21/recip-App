@@ -21,9 +21,10 @@ export class RecipeDetailComponent implements OnInit {
         this.id = +params['id']
         this.recipe = this.recipeService.getRecipe(this.id);
       })
-    
   }
-
+  onEditRecipe(){
+    this.router.navigate(['edit'], {relativeTo: this.route} )
+  }
 
   toShoppingList(recipe:Recipe){
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
