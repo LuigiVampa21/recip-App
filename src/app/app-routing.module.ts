@@ -9,6 +9,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'shopping-list', component: ShoppingListComponent, children: [
     {path: 'shopping-edit', component: ShoppingEditComponent}
   ] },
+  {path: 'auth', component: AuthComponent},
   { path: 'not-found', component: ErrorPageComponent, data: {message: 'Page not found!'} },
   { path: '**', redirectTo: 'not-found' }
 ];

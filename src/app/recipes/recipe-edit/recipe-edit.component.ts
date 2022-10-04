@@ -60,7 +60,6 @@ export class RecipeEditComponent implements OnInit {
     }else{
       this.recipeSerice.addRecipe(this.recipeForm.value)
     }
-    // this.recipeForm.reset();
     this.onCancel()
   }
 
@@ -73,7 +72,6 @@ export class RecipeEditComponent implements OnInit {
     )
   }
   onCancel(){
-    // this.recipeForm.reset();
     this.router.navigate(['../'], {relativeTo: this.activatedRoute});
   }
   onDeleteIngredient(i:number){
